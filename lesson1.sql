@@ -10,8 +10,9 @@ CREATE SCHEMA IF NOT EXISTS student_cms_plusplus CHARACTER SET utf8mb4;
     `address` VARCHAR(70) NULL,
     `age` VARCHAR(3) NULL,
     `email` VARCHAR(70) NULL,
-    `created_timstamp` TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP (6),
-    `last_updated_timestamp` TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP (6)
+    `created_timstamp` TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ,
+    `last_updated_timestamp` TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) 
+
 );
  
  
@@ -25,5 +26,11 @@ CREATE TABLE IF NOT EXISTS class (
     `created_timstamp` TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP (6),
     `last_updated_timestamp` TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP (6)
 );
+
 create table if not exists class1 as(select * from class);
 create table if not exists student1 like student;
+use student_cms_plusplus;
+CREATE table if not exists student_class(
+`student_id` int AUTO_INCREMENT ,
+`class_id` int AUTO_INCREMENT 
+);
