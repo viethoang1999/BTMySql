@@ -1,13 +1,10 @@
-package Mysql;
+package MysqlLapTop;
 
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.List;
 
-public class Connectionsss {
+public class ApplicationLaptop {
     public static void main(String[] args) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         try {
@@ -23,8 +20,11 @@ public class Connectionsss {
                     "jdbc:mysql://localhost:3306/store_cms_plusplus", "root", "0945533162");
             System.out.println("SQL Connection to database established!");
             LaptopService laptopService=new LaptopService(connection);
-            System.out.println(laptopService.SearchPrice(4000000l,null));
-            System.out.println(laptopService.Searchmakerandssd("ACER","ssd"));
+            //System.out.println(laptopService.SearchPrice(4000000l,null));
+            //System.out.println(laptopService.Searchmakerandssd("ACER","ssd"));
+            //System.out.println(laptopService.SearchLapTop(700000.0f,null,null,null,"AMD",
+                  //  null,null,null,"DESC"));
+           //System.out.println(laptopService.SearchSold());
 
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console" + e);

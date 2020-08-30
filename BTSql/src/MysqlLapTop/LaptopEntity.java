@@ -1,4 +1,4 @@
-package Mysql;
+package MysqlLapTop;
 
 import java.sql.Timestamp;
 

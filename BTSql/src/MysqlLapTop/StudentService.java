@@ -1,4 +1,4 @@
-package Mysql;
+package MysqlLapTop;
 
 public class StudentService {
 }
